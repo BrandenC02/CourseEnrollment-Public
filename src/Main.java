@@ -37,11 +37,39 @@ public class Main {
             Course course = new Course(CName, CLocation, CID, CCapacity);
             courselist.add(course);
         }
+        /*
         //Debugging: Display all courses created
         for (Course c : courselist) {
             c.CourseInfo();
         }
         //Debugging: Display all courses created
+        */
+       
+        System.out.println("Please enter the number of students you would like to create 0 to exit: ");
+        int numStudents = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
+
+        for (int i = 0; i < numStudents; i++) {
+            System.out.println("Enter details for Student " + (i + 1) + ":");
+            System.out.print("Name: ");
+            SName = scanner.nextLine();
+            System.out.print("Email: ");
+            SEmail = scanner.nextLine();
+            System.out.print("ID: ");
+            SID = scanner.nextLine();
+            System.out.print("Year: ");
+            SYear = scanner.nextLine();
+
+            Student student = new Student(SName, SEmail, SID, SYear);
+            studentlist.add(student);
+        }
+        /*
+        //Debugging: Display all students created
+        for (Student s : studentlist) {
+            s.StudentInfo();
+        }
+        //Debugging: Display all students created
+        */
 
     }
 }
