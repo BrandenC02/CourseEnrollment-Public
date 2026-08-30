@@ -21,18 +21,18 @@ public class Student {
     }
     
     //Student Methods
-    public void StudentInfo() {
+    public void StudentInfo() { //Prints the student's information
         System.out.println("Student: " + " name = " + Name + ", ID = " + ID + ", Email = " + Email + ", Year = " + Year);
     }
 
-    public void addcourse(Course course){
+    public void addcourse(Course course){ //Add a course to the student's list of courses
         courselist.add(course);
     }
 
     public void Displaycourses() {
         StudentInfo();
-        for(Course c : courselist){
-            System.out.println(c);
+        for(Course c : courselist){//Loop through the list of courses and print each course's information
+            c.CourseInfo();
         }
         System.out.println();
     }

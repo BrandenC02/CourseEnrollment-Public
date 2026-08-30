@@ -23,20 +23,21 @@ public class Course {
     }
 
     //Course Methods
-    public void addStudent(Student student){
+    public void addStudent(Student student){ //Add a student to the course's list of students and update the course's remaining capacity
         studentslist.add(student);
         updateCapacity();
     }
     
-    public void Displaystudents() {
+    public void Displaystudents() { //Prints the course's information and the list of students enrolled in the course
         CourseInfo();
         for(Student s : studentslist){
             s.StudentInfo();
         }
+        System.out.println("Remaining Capacity: " + getCapacity());
         System.out.println();
     }
 
-    public void CourseInfo() {
+    public void CourseInfo() { //Prints the course's information
         System.out.println("Course: " + "Name = " + Name + ", Location = " + Location + ", Capacity = " + Capacity + ", ID = " + ID);
     }
 
