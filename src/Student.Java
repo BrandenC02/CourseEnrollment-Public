@@ -9,6 +9,7 @@ public class Student {
     private String ID;
     private String Email;
     private String Year;
+    List<Course> courselist;
 
     //Student Constructor
     public Student(String Name, String Email, String ID, String Year) {
@@ -16,7 +17,7 @@ public class Student {
         setEmail(Email);
         setID(ID);
         setYear(Year);
-
+        courselist = new ArrayList<>();
     }
     
     //Student Methods
@@ -24,13 +25,16 @@ public class Student {
         System.out.println("Student: " + " name = " + Name + ", ID = " + ID + ", Email = " + Email + ", Year = " + Year);
     }
 
-    public void addcourse(){
-        
+    public void addcourse(Course course){
+        courselist.add(course);
     }
 
     public void Displaycourses() {
         StudentInfo();
-        
+        for(Course c : courselist){
+            System.out.println(c);
+        }
+        System.out.println();
     }
 
     //Student Getters and Setters
