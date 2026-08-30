@@ -10,6 +10,8 @@ public class Course {
     private String Location;
     private int Capacity;
     private String ID;
+    private List<Student> studentslist;
+
     
     //Course Constructor
     public Course(String Name, String Location, String ID, int Capacity) {
@@ -17,24 +19,26 @@ public class Course {
         setID(ID);
         setName(Name);
         setLocation(Location);
-        
+        studentslist = new ArrayList<>();
     }
 
     //Course Methods
-    public void addStudent(){
-        
+    public void addStudent(Student student){
+        studentslist.add(student);
+        updateCapacity();
     }
     
-    public void DisplayStudents() {
+    public void Displaystudents() {
         CourseInfo();
-        
+        for(Student s : studentslist){
+            s.StudentInfo();
+        }
+        System.out.println();
     }
 
-    
     public void CourseInfo() {
         System.out.println("Course: " + "Name = " + Name + ", Location = " + Location + ", Capacity = " + Capacity + ", ID = " + ID);
     }
-
 
     //Course Getters and Setters
     public String getName() {

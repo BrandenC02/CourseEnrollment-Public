@@ -11,29 +11,27 @@ public class Student {
     private String Year;
 
     //Student Constructor
-    public Student(String Name, String ID, String Email, String Year) {
+    public Student(String Name, String Email, String ID, String Year) {
         setName(Name);
-        setID(ID);
         setEmail(Email);
+        setID(ID);
         setYear(Year);
 
     }
     
     //Student Methods
-    public void studentinfo() {
-        System.out.println("Student: " + "name = " + Name + ", ID = " + ID + ", Email = " + Email + ", Year = " + Year);
+    public void StudentInfo() {
+        System.out.println("Student: " + " name = " + Name + ", ID = " + ID + ", Email = " + Email + ", Year = " + Year);
     }
 
-    public void addCourse(){
+    public void addcourse(){
         
     }
 
-    public void displaycourses() {
-        studentinfo();
+    public void Displaycourses() {
+        StudentInfo();
         
     }
-
-
 
     //Student Getters and Setters
     public String getName() {
